@@ -16,7 +16,7 @@ public class SetIntersectorTest
     // 2. Zwei nichtleere Mengen ungleich null mit leerem Schnitt.
     // 3. Zwei nichtleere Mengen, von der eine null ist.
     // 4. Zwei Mengen, die null sind.
-    // 5. Eine nichtleere und eine leere Menge. 
+    // 5. Eine nichtleere und eine leere Menge.
     // 6. Zwei leere Mengen.
 
     @Test

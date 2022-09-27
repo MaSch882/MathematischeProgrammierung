@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e28f3a3-71a0-4a07-979c-d568bdc9a3ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetIntersector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetIntersector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetOperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Teil_1/Interface/SetIntersectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Teil_1/Interface/SetIntersectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,7 @@
       <recent name="Teil_1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SetIntersectorTest">
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration name="SetIntersectionNaiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
       <extension name="coverage">
@@ -110,24 +111,6 @@
       <option name="PACKAGE_NAME" value="Teil_1.Interface" />
       <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SetIntersectorTest.testCalculateIntersectionOfManySets_oneEmptySet" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MathematischeProgrammierung" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Teil_1.Interface.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Teil_1.Interface" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
-      <option name="METHOD_NAME" value="testCalculateIntersectionOfManySets_oneEmptySet" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -188,13 +171,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MathematischeProgrammierung" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.SetIntersectorTest" />
         <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneEmpty" />
         <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneNull" />
         <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_oneNull" />
-        <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_oneEmptySet" />
       </list>
     </recent_temporary>
   </component>

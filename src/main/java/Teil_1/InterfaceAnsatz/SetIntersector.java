@@ -1,15 +1,23 @@
-package Teil_1.Interface;
+package Teil_1.InterfaceAnsatz;
 
 import java.util.*;
 
-public class SetIntersector<T> implements SetOperator<T>
+/**
+ * @param <T> Der generische Typparameter T.
+ * @author Matthias Schulte
+ * <p>
+ * Diese Auspraegung realisiert die Schnitt-Operation, welche eine normale Operation ist.
+ */
+public class SetIntersector<T> implements NormalSetOperator<T>
 {
 
     /**
-     * {@inheritDoc} Hier ist die Operation die Schnittbildung.
+     * {@inheritDoc}
+     * <p>
+     * Hier ist die Operation die Schnittbildung.
      */
     @Override
-    public Set<T> executeOperationOnTwoSets(Set<T> setA, Set<T> setB)
+    public Set<T> executeOperationOnTwoSets(final Set<T> setA, final Set<T> setB)
     {
         return calculateIntersectionOfTwoSets(setA, setB);
     }
@@ -24,21 +32,24 @@ public class SetIntersector<T> implements SetOperator<T>
      * @param setB Die zweite Menge.
      * @return Die Schnittmenge beider Mengen.
      */
-    protected Set<T> calculateIntersectionOfTwoSets(Set<T> setA, Set<T> setB)
+    protected Set<T> calculateIntersectionOfTwoSets(final Set<T> setA, final Set<T> setB)
     {
         if (setA == null || setB == null)
         {
             return new HashSet<>();
         }
-        setA.retainAll(setB);
-        return setA;
+        Set<T> result = setA;
+        result.retainAll(setB);
+        return result;
     }
 
     /**
-     * {@inheritDoc} Hier ist die Operation die Schnittbildung.
+     * {@inheritDoc}
+     * <p>
+     * Hier ist die Operation die Schnittbildung.
      */
     @Override
-    public Set<T> executeOperationOnListOfSets(List<Set<T>> listOfSets)
+    public Set<T> executeOperationOnListOfSets(final List<Set<T>> listOfSets)
     {
         return calculateIntersectionOfListOfSets(listOfSets);
     }
@@ -52,7 +63,7 @@ public class SetIntersector<T> implements SetOperator<T>
      * @param listOfSets Die Liste der <code>n</code> Mengen.
      * @return Die Schnittmenge der <code>n</code> Mengen.
      */
-    public Set<T> calculateIntersectionOfListOfSets(List<Set<T>> listOfSets)
+    public Set<T> calculateIntersectionOfListOfSets(final List<Set<T>> listOfSets)
     {
         Set<T> intersection = listOfSets.get(0);
         // Wenn die erste Menge 'null' ist, geben wir eine leere Menge zurueck.
@@ -68,11 +79,13 @@ public class SetIntersector<T> implements SetOperator<T>
     }
 
     /**
-     * {@inheritDoc} Hier ist die Operation die Schnittbildung.
+     * {@inheritDoc}
+     * <p>
+     * Hier ist die Operation die Schnittbildung.
      */
     @SafeVarargs
     @Override
-    public final Set<T> executeOperationOnManySets(Set<T>... sets)
+    public final Set<T> executeOperationOnManySets(final Set<T>... sets)
     {
         return calculateIntersectionOfManySets(sets);
     }
@@ -87,7 +100,7 @@ public class SetIntersector<T> implements SetOperator<T>
      * @return Die Schnittmenge der uebergebenen Mengen.
      */
     @SafeVarargs
-    public final Set<T> calculateIntersectionOfManySets(Set<T>... sets)
+    public final Set<T> calculateIntersectionOfManySets(final Set<T>... sets)
     {
         // Wenn sets schon 'null' ist, gib eine leere Menge zurueck.
         if (sets == null)

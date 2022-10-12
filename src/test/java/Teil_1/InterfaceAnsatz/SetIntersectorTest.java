@@ -1,4 +1,4 @@
-package Teil_1.Interface;
+package Teil_1.InterfaceAnsatz;
 
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class SetIntersectorTest
 
     //-----------------------------------------------------------------------------------------------------------------
 
-    // Testfaelle - testCalculateIntersectionOfTwoSets:
+    // Testfaelle - testExecuteOperationOnTwoSets:
     // 1. Zwei nichtleere Mengen ungleich null mit nichtleerem Schnitt.
     // 2. Zwei nichtleere Mengen ungleich null mit leerem Schnitt.
     // 3. Zwei nichtleere Mengen, von der eine null ist.
@@ -20,7 +20,7 @@ public class SetIntersectorTest
     // 6. Zwei leere Mengen.
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_twoNonemptySetsWithNonemptyIntersection()
+    public void testExecuteOperationOnTwoSets_twoNonemptySetsWithNonemptyIntersection()
     {
         // Given
 
@@ -32,7 +32,7 @@ public class SetIntersectorTest
 
         // When
 
-        Set<Integer> intersection = setOperator.calculateIntersectionOfTwoSets(setA, setB);
+        Set<Integer> intersection = setOperator.executeOperationOnTwoSets(setA, setB);
 
         // Then
 
@@ -40,7 +40,7 @@ public class SetIntersectorTest
     }
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_twoNonemptySetsWithEmptyIntersection()
+    public void testExecuteOperationOnTwoSets_twoNonemptySetsWithEmptyIntersection()
     {
         // Given
 
@@ -51,7 +51,7 @@ public class SetIntersectorTest
 
         // When
 
-        Set<Integer> intersection = setOperator.calculateIntersectionOfTwoSets(setA, setB);
+        Set<Integer> intersection = setOperator.executeOperationOnTwoSets(setA, setB);
 
         // Then
 
@@ -59,7 +59,7 @@ public class SetIntersectorTest
     }
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_oneNull()
+    public void testExecuteOperationOnTwoSets_oneNull()
     {
         // Given
         Set<Integer> setA = new HashSet<>(Arrays.asList(1, 2, 3, 4));
@@ -67,8 +67,8 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> intersectionSetAAndNull = setOperator.calculateIntersectionOfTwoSets(setA, null);
-        Set<Integer> intersectionNullAndSetA = setOperator.calculateIntersectionOfTwoSets(null, setA);
+        Set<Integer> intersectionSetAAndNull = setOperator.executeOperationOnTwoSets(setA, null);
+        Set<Integer> intersectionNullAndSetA = setOperator.executeOperationOnTwoSets(null, setA);
 
         // Then
 
@@ -78,7 +78,7 @@ public class SetIntersectorTest
     }
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_bothNull()
+    public void testExecuteOperationOnTwoSets_bothNull()
     {
         // Given
 
@@ -86,7 +86,7 @@ public class SetIntersectorTest
 
         // When
 
-        Set<Integer> intersectionNullAndNull = setOperator.calculateIntersectionOfTwoSets(null, null);
+        Set<Integer> intersectionNullAndNull = setOperator.executeOperationOnTwoSets(null, null);
 
         // Then
 
@@ -94,7 +94,7 @@ public class SetIntersectorTest
     }
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_oneEmpty()
+    public void testExecuteOperationOnTwoSets_oneEmpty()
     {
         // Given
         Set<Integer> setA = new HashSet<>(Arrays.asList(1, 2, 3, 4));
@@ -103,8 +103,8 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> intersectionSetAAndNull = setOperator.calculateIntersectionOfTwoSets(setA, setB);
-        Set<Integer> intersectionNullAndSetA = setOperator.calculateIntersectionOfTwoSets(setB, setA);
+        Set<Integer> intersectionSetAAndNull = setOperator.executeOperationOnTwoSets(setA, setB);
+        Set<Integer> intersectionNullAndSetA = setOperator.executeOperationOnTwoSets(setB, setA);
 
         // Then
 
@@ -113,7 +113,7 @@ public class SetIntersectorTest
     }
 
     @Test
-    public void testCalculateIntersectionOfTwoSets_bothEmpty()
+    public void testExecuteOperationOnTwoSets_bothEmpty()
     {
         // Given
         Set<Integer> setA = new HashSet<>();
@@ -122,7 +122,7 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> intersectionSetAAndNull = setOperator.calculateIntersectionOfTwoSets(setA, setB);
+        Set<Integer> intersectionSetAAndNull = setOperator.executeOperationOnTwoSets(setA, setB);
 
         // Then
 
@@ -131,7 +131,7 @@ public class SetIntersectorTest
 
     //-----------------------------------------------------------------------------------------------------------------
 
-    // Testfaelle - testCalculateIntersectionOfListsOfSets:
+    // Testfaelle - testExecuteOperationOnListOfSets:
     // 1. Drei nichtleere Mengen mit nichtleerem Schnitt.
     // 2. Drei nichtleere Mengen mit leerem Schnitt.
     // 3. Zwei nichtleere Mengen mit nichtleerem Schnitt.
@@ -142,7 +142,7 @@ public class SetIntersectorTest
     // -> Reicht aus, da alle weiteren Kombinationen schon oben abgetestet sind.
 
     @Test
-    public void testCalculateIntersectionOfListsOfSets_threeNonemptySetsWithNonemptyIntersection()
+    public void testExecuteOperationOnListOfSets_threeNonemptySetsWithNonemptyIntersection()
     {
         //Given
 
@@ -156,14 +156,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfListOfSets(sets);
+        Set<Integer> result = setOperator.executeOperationOnListOfSets(sets);
 
         // Then
         assertThat(result).containsExactlyInAnyOrderElementsOf(expectedResult);
     }
 
     @Test
-    public void testCalculateIntersectionOfListsOfSets_threeNonemptySetsWithEmptyIntersection()
+    public void testExecuteOperationOnListOfSets_threeNonemptySetsWithEmptyIntersection()
     {
         //Given
 
@@ -176,14 +176,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfListOfSets(sets);
+        Set<Integer> result = setOperator.executeOperationOnListOfSets(sets);
 
         // Then
         assertThat(result).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfListsOfSets_twoNonemptySetsWithNonemptyIntersection()
+    public void testExecuteOperationOnListOfSets_twoNonemptySetsWithNonemptyIntersection()
     {
         //Given
 
@@ -196,14 +196,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfListOfSets(sets);
+        Set<Integer> result = setOperator.executeOperationOnListOfSets(sets);
 
         // Then
         assertThat(result).containsExactlyInAnyOrderElementsOf(expectedResult);
     }
 
     @Test
-    public void testCalculateIntersectionOfListsOfSets_twoNonemptySetsWithEmptyIntersection()
+    public void testExecuteOperationOnListOfSets_twoNonemptySetsWithEmptyIntersection()
     {
         //Given
 
@@ -215,14 +215,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfListOfSets(sets);
+        Set<Integer> result = setOperator.executeOperationOnListOfSets(sets);
 
         // Then
         assertThat(result).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfListsOfSets_threeSetsWithOneNull()
+    public void testExecuteOperationOnListOfSets_threeSetsWithOneNull()
     {
         //Given
 
@@ -237,13 +237,13 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When - Then
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination1)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination2)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination3)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination1)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination2)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination3)).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfListOfSets_threeSetsWithOneEmpty()
+    public void testExecuteOperationOnListOfSets_threeSetsWithOneEmpty()
     {
         //Given
 
@@ -259,15 +259,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When - Then
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination1)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination2)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfListOfSets(setsCombination3)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination1)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination2)).isEmpty();
+        assertThat(setOperator.executeOperationOnListOfSets(setsCombination3)).isEmpty();
     }
 
     //-----------------------------------------------------------------------------------------------------------------
-    //-----------------------------------------------------------------------------------------------------------------
-
-    // Testfaelle - testCalculateIntersectionOfManySets:
+    
+    // Testfaelle - testExecuteOperationOnManySets:
     // 1. Drei nichtleere Mengen mit nichtleerem Schnitt.
     // 2. Drei nichtleere Mengen mit leerem Schnitt.
     // 3. Zwei nichtleere Mengen mit nichtleerem Schnitt.
@@ -281,7 +280,7 @@ public class SetIntersectorTest
     // -> Reicht aus, da alle weiteren Kombinationen schon oben abgetestet sind.
 
     @Test
-    public void testCalculateIntersectionOfManySets_threeNonemptySetsWithNonemptyIntersection()
+    public void testExecuteOperationOnManySets_threeNonemptySetsWithNonemptyIntersection()
     {
         //Given
 
@@ -294,14 +293,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA, setB, setC);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA, setB, setC);
 
         // Then
         assertThat(result).containsExactlyInAnyOrderElementsOf(expectedResult);
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_threeNonemptySetsWithEmptyIntersection()
+    public void testExecuteOperationOnManySets_threeNonemptySetsWithEmptyIntersection()
     {
         //Given
 
@@ -313,14 +312,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA, setB, setC);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA, setB, setC);
 
         // Then
         assertThat(result).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_twoNonemptySetsWithNonemptyIntersection()
+    public void testExecuteOperationOnManySets_twoNonemptySetsWithNonemptyIntersection()
     {
         //Given
 
@@ -332,14 +331,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA, setB);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA, setB);
 
         // Then
         assertThat(result).containsExactlyInAnyOrderElementsOf(expectedResult);
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_twoNonemptySetsWithEmptyIntersection()
+    public void testExecuteOperationOnManySets_twoNonemptySetsWithEmptyIntersection()
     {
         //Given
 
@@ -350,14 +349,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA, setB);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA, setB);
 
         // Then
         assertThat(result).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_oneNonemptySet()
+    public void testExecuteOperationOnManySets_oneNonemptySet()
     {
         //Given
 
@@ -367,14 +366,14 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA);
 
         // Then
         assertThat(result).containsExactlyInAnyOrderElementsOf(setA);
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_oneEmptySet()
+    public void testExecuteOperationOnManySets_oneEmptySet()
     {
         //Given
 
@@ -384,21 +383,21 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When
-        Set<Integer> result = setOperator.calculateIntersectionOfManySets(setA);
+        Set<Integer> result = setOperator.executeOperationOnManySets(setA);
 
         // Then
         assertThat(result).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_oneNull()
+    public void testExecuteOperationOnManySets_oneNull()
     {
         SetIntersector<Integer> setOperator = new SetIntersector<>();
-        assertThat(setOperator.calculateIntersectionOfManySets(null)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(null)).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_threeSetsWithOneNull()
+    public void testExecuteOperationOnManySets_threeSetsWithOneNull()
     {
         //Given
 
@@ -408,13 +407,13 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When - Then
-        assertThat(setOperator.calculateIntersectionOfManySets(setA, setB, null)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfManySets(setA, null, setB)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfManySets(null, setA, setB)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(setA, setB, null)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(setA, null, setB)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(null, setA, setB)).isEmpty();
     }
 
     @Test
-    public void testCalculateIntersectionOfManySets_threeSetsWithOneEmpty()
+    public void testExecuteOperationOnManySets_threeSetsWithOneEmpty()
     {
         //Given
 
@@ -425,9 +424,9 @@ public class SetIntersectorTest
         SetIntersector<Integer> setOperator = new SetIntersector<>();
 
         // When - Then
-        assertThat(setOperator.calculateIntersectionOfManySets(setA, setB, setC)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfManySets(setA, setC, setB)).isEmpty();
-        assertThat(setOperator.calculateIntersectionOfManySets(setC, setA, setB)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(setA, setB, setC)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(setA, setC, setB)).isEmpty();
+        assertThat(setOperator.executeOperationOnManySets(setC, setA, setB)).isEmpty();
     }
 
 

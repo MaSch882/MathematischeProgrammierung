@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e28f3a3-71a0-4a07-979c-d568bdc9a3ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Teil_1/InterfaceAnsatz/NormalSetOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Teil_1/InterfaceAnsatz/SetUnifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Teil_1/InterfaceAnsatz/SetUnifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetIntersector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetIntersector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Teil_1/Interface/SetIntersectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Teil_1/Interface/SetIntersectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetIntersector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Teil_1/InterfaceAnsatz/SetIntersector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Teil_1/Interface/SetUnifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Teil_1/Interface/SetIntersectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Teil_1/InterfaceAnsatz/SetIntersectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +26,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -60,6 +66,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
@@ -67,7 +74,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="actions.on.save" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -82,17 +89,17 @@
       <recent name="Teil_1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
-    <configuration name="SetIntersectionNaiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Teil_1.InterfaceAnsatz">
+    <configuration name="SetUnifierTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Teil_1.NaiverAnsatz.*" />
+          <option name="PATTERN" value="Teil_1.InterfaceAnsatz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Teil_1" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.NaiverAnsatz.SetIntersectionNaiveTest" />
+      <option name="PACKAGE_NAME" value="Teil_1.InterfaceAnsatz" />
+      <option name="MAIN_CLASS_NAME" value="Teil_1.InterfaceAnsatz.SetUnifierTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -100,34 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetIntersectorTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SetUnifierTest.testExecuteOperationOnListOfSets_threeNonemptySetsWithNonemptyIntersection" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Teil_1.Interface.*" />
+          <option name="PATTERN" value="Teil_1.InterfaceAnsatz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Teil_1.Interface" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SetIntersectorTest.testCalculateIntersectionOfManySets_oneNull" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MathematischeProgrammierung" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Teil_1.Interface.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Teil_1.Interface" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
-      <option name="METHOD_NAME" value="testCalculateIntersectionOfManySets_oneNull" />
+      <option name="PACKAGE_NAME" value="Teil_1.InterfaceAnsatz" />
+      <option name="MAIN_CLASS_NAME" value="Teil_1.InterfaceAnsatz.SetUnifierTest" />
+      <option name="METHOD_NAME" value="testExecuteOperationOnListOfSets_threeNonemptySetsWithNonemptyIntersection" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -135,17 +125,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SetUnifierTest.testExecuteOperationOnListOfSets_threeSetsWithOneEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Teil_1.Interface.*" />
+          <option name="PATTERN" value="Teil_1.InterfaceAnsatz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Teil_1.Interface" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
-      <option name="METHOD_NAME" value="testCalculateIntersectionOfManySets_threeSetsWithOneEmpty" />
+      <option name="PACKAGE_NAME" value="Teil_1.InterfaceAnsatz" />
+      <option name="MAIN_CLASS_NAME" value="Teil_1.InterfaceAnsatz.SetUnifierTest" />
+      <option name="METHOD_NAME" value="testExecuteOperationOnListOfSets_threeSetsWithOneEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,17 +143,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneNull" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SetUnifierTest.testExecuteOperationOnListOfSets_threeSetsWithOneNull" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Teil_1.Interface.*" />
+          <option name="PATTERN" value="Teil_1.InterfaceAnsatz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Teil_1.Interface" />
-      <option name="MAIN_CLASS_NAME" value="Teil_1.Interface.SetIntersectorTest" />
-      <option name="METHOD_NAME" value="testCalculateIntersectionOfManySets_threeSetsWithOneNull" />
+      <option name="PACKAGE_NAME" value="Teil_1.InterfaceAnsatz" />
+      <option name="MAIN_CLASS_NAME" value="Teil_1.InterfaceAnsatz.SetUnifierTest" />
+      <option name="METHOD_NAME" value="testExecuteOperationOnListOfSets_threeSetsWithOneNull" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,9 +161,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Teil_1.InterfaceAnsatz" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MathematischeProgrammierung" />
-      <option name="PACKAGE_NAME" value="" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Teil_1.InterfaceAnsatz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Teil_1.InterfaceAnsatz" />
       <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
@@ -183,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.SetIntersectorTest" />
-        <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneEmpty" />
-        <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_threeSetsWithOneNull" />
-        <item itemvalue="TestNG.SetIntersectorTest.testCalculateIntersectionOfManySets_oneNull" />
+        <item itemvalue="TestNG.Teil_1.InterfaceAnsatz" />
+        <item itemvalue="TestNG.SetUnifierTest" />
+        <item itemvalue="TestNG.SetUnifierTest.testExecuteOperationOnListOfSets_threeSetsWithOneNull" />
+        <item itemvalue="TestNG.SetUnifierTest.testExecuteOperationOnListOfSets_threeSetsWithOneEmpty" />
+        <item itemvalue="TestNG.SetUnifierTest.testExecuteOperationOnListOfSets_threeNonemptySetsWithNonemptyIntersection" />
       </list>
     </recent_temporary>
   </component>
@@ -224,8 +220,14 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MathematischeProgrammierung$Teil_1_InterfaceAnsatz.ic" NAME="Teil_1.InterfaceAnsatz Coverage Results" MODIFIED="1665566925560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Teil_1.InterfaceAnsatz.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/MathematischeProgrammierung$SetOperationsTest.ic" NAME="SetOperationsTest Coverage Results" MODIFIED="1664219475138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Teil_1.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MathematischeProgrammierung$SetIntersectorTest.ic" NAME="SetIntersectorTest Coverage Results" MODIFIED="1665566355981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Teil_1.Interface.*</FILTER>
     </SUITE>
   </component>
 </project>
